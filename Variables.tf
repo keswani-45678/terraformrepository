@@ -18,3 +18,12 @@ variable "tenant_id" {
     description = "The name of the tenant"
 }
 
+variable "env" {
+  description = "Environment name"
+  default     = "dev"
+}
+
+variable "namespace" {
+  default = "tfaz"
+}
+
