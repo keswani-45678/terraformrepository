@@ -1,13 +1,10 @@
-provider "azurerm" {
-  version = "2.0.0"
-  features {}
-}
+provider "azurerm" {}
 
 
 resource "azurerm_resource_group" "resource_group" {
   
   name     = "${var.namespace}-rg-${var.env}"
-  location = var.location
+  location = "${var.location}"
   
   tags {
     environment = "${var.env}"
