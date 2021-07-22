@@ -8,12 +8,10 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "resource_group" {
   
-   name     = "${var.namespace}-rg-${var.env}"
-
+  name     = "${var.namespace}-rg-${var.env}"
+  location = var.location
+  
   tags {
     environment = "${var.env}"
-    application = "gopher-search"
   }
-  name     = var.rg-name
-  location = var.location
 }
