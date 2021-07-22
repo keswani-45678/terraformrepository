@@ -7,6 +7,13 @@ provider "azurerm" {
 
 
 resource "azurerm_resource_group" "resource_group" {
+  
+   name     = "${var.namespace}-rg-${var.env}"
+
+  tags {
+    environment = "${var.env}"
+    application = "gopher-search"
+  }
   name     = var.rg-name
   location = var.location
 }
