@@ -1,13 +1,7 @@
-terraform {
-  backend "remote" {
-    organization = "terraformrepo"
 
-    workspaces {
-      name = "cliworkspacetf"
-    }
-  }
+provider "azurerm" {
+  features {}
 }
-
 
 resource "azurerm_resource_group" "resource_group" {
   name     = "tests"
