@@ -3,7 +3,7 @@ provider "azurerm" {
   features {}
 }
 
-module "rg" {
+module "tfdemo" {
   source  = "app.terraform.io/terraformrepo/tfdemo/azure"
   version = "1.0.1"
 }
