@@ -4,6 +4,6 @@ provider "azurerm" {
 }
 
 module "rg" {
-  source  = "app.terraform.io/terraformrepo/tfdemo/azurerm"
+  source  = "app.terraform.io/terraformrepo/tfdemo/azure"
   version = "1.0.1"
 }
